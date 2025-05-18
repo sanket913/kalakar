@@ -69,16 +69,6 @@ const Courses: React.FC = () => {
             Discover Your Artistic Journey
           </motion.h2>
           
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mx-auto section-subtitle"
-          >
-            Choose from our carefully designed courses that cater to different interests, skill levels, and schedules.
-            All materials are provided for in-studio classes.
-          </motion.p>
-        </div>
         
         <div className="grid gap-8 mt-16 lg:grid-cols-3">
           {courses.map((course, index) => (
