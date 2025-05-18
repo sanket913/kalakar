@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Palette, PencilRuler, Paintbrush, Users, Clock, Award } from 'lucide-react';
+import { Palette, PencilRuler, Paintbrush, Clock, Award } from 'lucide-react';
 
 const Courses: React.FC = () => {
   const [ref, inView] = useInView({
@@ -16,8 +16,7 @@ const Courses: React.FC = () => {
       description: 'Develop foundational drawing, coloring, and composition skills to enhance creativity and artistic expression, exploring line work, geometric shapes, color theory, shading, and imaginative designs.',
       image: 'https://images.pexels.com/photos/6615294/pexels-photo-6615294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        { icon: <Users size={16} />, text: 'Max 8 students' },
-        { icon: <Clock size={16} />, text: '8 weeks, 2 hrs/week' },
+        { icon: <Clock size={16} />, text: '1-2 months' },
         { icon: <Award size={16} />, text: 'Certificate included' },
       ],
       color: 'from-blue-500 to-indigo-600',
@@ -29,8 +28,7 @@ const Courses: React.FC = () => {
       description: 'Explore advanced sketching, perspective drawing, and portrait basics while mastering acrylic, watercolor, and poster painting techniques. Engage in DIY art projects like canvas painting, decorative bookmarks, and clay or paper crafts for hands-on creativity.',
       image: 'https://images.pexels.com/photos/3004109/pexels-photo-3004109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        { icon: <Users size={16} />, text: 'Max 10 students' },
-        { icon: <Clock size={16} />, text: '6 weeks, 2 hrs/week' },
+        { icon: <Clock size={16} />, text: '1.5-2.5 months' },
         { icon: <Award size={16} />, text: 'Certificate included' },
       ],
       color: 'from-purple-500 to-pink-600',
@@ -42,8 +40,7 @@ const Courses: React.FC = () => {
       description: 'Master advanced sketching, dynamic figure drawing, and professional painting techniques, including knife painting and mixed media. Explore resin, glass, and bottle art while learning to price, sell, and exhibit your artwork professionally.',
       image: 'https://images.pexels.com/photos/4889069/pexels-photo-4889069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
-        { icon: <Users size={16} />, text: 'Max 8 students' },
-        { icon: <Clock size={16} />, text: '10 weeks, 3 hrs/week' },
+        { icon: <Clock size={16} />, text: '2-3 months' },
         { icon: <Award size={16} />, text: 'Gallery exhibition' },
       ],
       color: 'from-emerald-500 to-teal-600',
