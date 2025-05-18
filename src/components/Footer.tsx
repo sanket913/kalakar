@@ -1,4 +1,5 @@
 import { Palette } from 'lucide-react';
+import logo from '../assets/images/logo.png';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -8,12 +9,11 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className="grid gap-8 mb-8 md:grid-cols-3">
           <div className="col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <Palette size={32} className="text-primary-400" strokeWidth={1.5} />
-              <span className="text-2xl font-bold font-display">
-                <span className="text-primary-400">Kalakar</span> Art
-              </span>
-            </div>
+            <img 
+            src={logo}
+            alt="Kalakar Art Academy Logo" 
+            className="h-12 md:h-16"
+          />
             <p className="mb-4 text-gray-400">
               Unleash your creative potential and discover the artist within 
               at Mumbai's premier art education center.
