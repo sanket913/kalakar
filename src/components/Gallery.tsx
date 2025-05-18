@@ -9,7 +9,6 @@ import gallery3 from '../assets/images/gallery3.jpg';
 import gallery4 from '../assets/images/gallery4.jpg';
 import gallery5 from '../assets/images/gallery5.jpg';
 import gallery6 from '../assets/images/gallery6.jpg';
-import gallery7 from '../assets/images/gallery7.jpg';
 
 const Gallery: React.FC = () => {
   const [ref, inView] = useInView({
