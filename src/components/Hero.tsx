@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
             <h1 className="mb-6 text-2xl font-bold leading-tight md:text-5xl lg:text-6xl">
               हर घर में छुपा है<br />
               <span className="relative ml-3">
-                <span className="relative z-10 text-4xl text-primary-600 text-right">एक कलाकार</span>
+                <span className="relative z-10 text-4xl text-primary-600">एक कलाकार</span>
                 <span className="absolute bottom-2 left-0 w-full h-3 bg-secondary-200 -z-0"></span>
               </span>
             </h1>
