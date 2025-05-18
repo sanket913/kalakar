@@ -37,7 +37,7 @@ const Courses: React.FC = () => {
       icon: <Palette className="w-6 h-6 text-white" />,
       title: 'Creative Expression',
       description: 'Find your unique artistic voice through guided exploration of various styles and techniques. This advanced course focuses on personal project development.',
-      image: 'https://images.pexels.com/photos/3705894/pexels-photo-3705894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://www.pexels.com/photo/vibrant-abstract-fluid-art-in-pink-and-purple-32125446/',
       features: [
         { icon: <Users size={16} />, text: 'Max 8 students' },
         { icon: <Clock size={16} />, text: '10 weeks, 3 hrs/week' },
