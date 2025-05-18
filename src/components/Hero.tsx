@@ -72,12 +72,6 @@ const Hero: React.FC = () => {
                 alt="Kalakar Art Academy Logo" 
                 className="object-contain w-full h-full"
               />
-
-            
-            <div className="absolute -top-6 -right-6 p-4 bg-white rounded-lg shadow-lg w-40 md:w-48">
-              <p className="font-semibold text-secondary-600">All Skill Levels</p>
-              <p className="text-sm text-gray-600">Beginners welcome</p>
-            </div>
           </motion.div>
         </div>
       </div>
