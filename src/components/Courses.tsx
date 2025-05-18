@@ -102,7 +102,7 @@ const Courses: React.FC = () => {
 
             <div className="flex flex-wrap gap-4 mt-6">
               {course.features.map((feature, fidx) => (
-                <div key={fidx} className="flex items-center gap-2 text-sm">
+                <div key={fidx} className="flex items-center gap-2 text-sm text-primary-600">
                   {feature.icon}
                   <span>{feature.text}</span>
                 </div>
