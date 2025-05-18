@@ -13,7 +13,7 @@ const Courses: React.FC = () => {
       icon: <Paintbrush className="w-6 h-6 text-white" />,
       title: 'Level 1: Basic Course',
       subtitle: 'Art Fundamentals',
-      description: 'Master the basics of color theory, composition, and various painting techniques across different mediums including acrylics, oils, and watercolors.',
+      description: 'Develop foundational drawing, coloring, and composition skills to enhance creativity and artistic expression, exploring line work, geometric shapes, color theory, shading, and imaginative designs.',
       image: 'https://images.pexels.com/photos/6615294/pexels-photo-6615294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         { icon: <Users size={16} />, text: 'Max 8 students' },
@@ -26,7 +26,7 @@ const Courses: React.FC = () => {
       icon: <PencilRuler className="w-6 h-6 text-white" />,
       title: 'Level 2: Intermediate Course',
       subtitle: 'Artistic Development & Mediums',
-      description: 'Develop your observational skills and technical abilities in pencil, charcoal, and ink drawing. Learn perspective, shading, and realistic rendering.',
+      description: 'Explore advanced sketching, perspective drawing, and portrait basics while mastering acrylic, watercolor, and poster painting techniques. Engage in DIY art projects like canvas painting, decorative bookmarks, and clay or paper crafts for hands-on creativity.',
       image: 'https://images.pexels.com/photos/3004109/pexels-photo-3004109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         { icon: <Users size={16} />, text: 'Max 10 students' },
@@ -39,7 +39,7 @@ const Courses: React.FC = () => {
       icon: <Palette className="w-6 h-6 text-white" />,
       title: 'Level 3: Advanced Course',
       subtitle: 'Artistic Mastery & Self Expression',
-      description: 'Find your unique artistic voice through guided exploration of various styles and techniques. This advanced course focuses on personal project development.',
+      description: 'Master advanced sketching, dynamic figure drawing, and professional painting techniques, including knife painting and mixed media. Explore resin, glass, and bottle art while learning to price, sell, and exhibit your artwork professionally.',
       image: 'https://images.pexels.com/photos/4889069/pexels-photo-4889069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         { icon: <Users size={16} />, text: 'Max 8 students' },
