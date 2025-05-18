@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ArrowLeft, ArrowRight, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import gallery1 from '../assets/images/gallery1.jpg';
 
 const Gallery: React.FC = () => {
   const [ref, inView] = useInView({
@@ -14,7 +15,7 @@ const Gallery: React.FC = () => {
 
   const galleryItems = [
     {
-      image: 'https://images.pexels.com/photos/1646953/pexels-photo-1646953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: gallery1,
       title: 'Abstract Watercolor',
     },
     {
