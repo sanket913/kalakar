@@ -100,11 +100,9 @@ const Contact: React.FC = () => {
                     required
                   >
                     <option value="">Select a course</option>
-                    <option value="painting">Painting Fundamentals</option>
-                    <option value="sketching">Sketching & Drawing</option>
-                    <option value="creative">Creative Expression</option>
-                    <option value="private">Private Lessons</option>
-                    <option value="other">Other</option>
+                    <option value="basic">Art Fundamental</option>
+                    <option value="intermediate">Artistic Development & Medium</option>
+                    <option value="advance">Artistic Mastery & Self Expression</option>
                   </select>
                 </div>
                 
