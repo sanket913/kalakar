@@ -14,7 +14,7 @@ const Courses: React.FC = () => {
       title: 'Level 1: Basic Course',
       subtitle: 'Art Fundamentals',
       description: 'Master the basics of color theory, composition, and various painting techniques across different mediums including acrylics, oils, and watercolors.',
-      image: 'https://images.pexels.com/photos/1145720/pexels-photo-1145720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/6615294/pexels-photo-6615294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         { icon: <Users size={16} />, text: 'Max 8 students' },
         { icon: <Clock size={16} />, text: '8 weeks, 2 hrs/week' },
@@ -27,7 +27,7 @@ const Courses: React.FC = () => {
       title: 'Level 2: Intermediate Course',
       subtitle: 'Artistic Development & Mediums',
       description: 'Develop your observational skills and technical abilities in pencil, charcoal, and ink drawing. Learn perspective, shading, and realistic rendering.',
-      image: 'https://images.pexels.com/photos/6474494/pexels-photo-6474494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://images.pexels.com/photos/3004109/pexels-photo-3004109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         { icon: <Users size={16} />, text: 'Max 10 students' },
         { icon: <Clock size={16} />, text: '6 weeks, 2 hrs/week' },
@@ -40,7 +40,7 @@ const Courses: React.FC = () => {
       title: 'Level 3: Advanced Course',
       subtitle: 'Artistic Mastery & Self Expression',
       description: 'Find your unique artistic voice through guided exploration of various styles and techniques. This advanced course focuses on personal project development.',
-      image: 'https://www.pexels.com/photo/a-person-making-a-skateboard-4889069/',
+      image: 'https://images.pexels.com/photos/4889069/pexels-photo-4889069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         { icon: <Users size={16} />, text: 'Max 8 students' },
         { icon: <Clock size={16} />, text: '10 weeks, 3 hrs/week' },
