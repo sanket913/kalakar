@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
             </p>
             <p className="text-gray-400">
               +91 8866742028<br />
-              artbykalakaar@gmail.com
+              kalakarartacademy@gmail.com
             </p>
           </div>
           
