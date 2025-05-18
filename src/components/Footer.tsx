@@ -20,27 +20,21 @@ const Footer: React.FC = () => {
             </p>
             <p className="text-gray-400">
               +91 8866742028<br />
-              info@kalakarartacademy.com
+              artbykalakaar@gmail.com
             </p>
           </div>
           
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Programs</h3>
+            <h3 className="mb-4 text-lg font-semibold">Courses</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#courses" className="hover:text-primary-400">Painting Classes</a>
+                <a href="#courses" className="hover:text-primary-400">Art Fundamentals</a>
               </li>
               <li>
-                <a href="#courses" className="hover:text-primary-400">Sketching & Drawing</a>
+                <a href="#courses" className="hover:text-primary-400">Artistic Development & Mediums</a>
               </li>
               <li>
-                <a href="#courses" className="hover:text-primary-400">Creative Expression</a>
-              </li>
-              <li>
-                <a href="#courses" className="hover:text-primary-400">Private Lessons</a>
-              </li>
-              <li>
-                <a href="#courses" className="hover:text-primary-400">Children's Art Programs</a>
+                <a href="#courses" className="hover:text-primary-400">Artistic Mastery & Self Expression</a>
               </li>
             </ul>
           </div>
@@ -52,13 +46,7 @@ const Footer: React.FC = () => {
                 <a href="#" className="hover:text-primary-400">FAQ</a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary-400">Materials List</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary-400">Tutorials</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary-400">Events</a>
+                <a href="#" className="hover:text-primary-400">Gallery</a>
               </li>
               <li>
                 <a href="#contact" className="hover:text-primary-400">Contact Us</a>
