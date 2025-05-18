@@ -25,7 +25,7 @@ const Courses: React.FC = () => {
       icon: <PencilRuler className="w-6 h-6 text-white" />,
       title: 'Level 2: Intermediate Course',
       subtitle: 'Artistic Development & Mediums',
-      description: 'Explore advanced sketching, perspective drawing, and portrait basics while mastering acrylic, watercolor, and poster painting techniques. Engage in DIY art projects like canvas painting, decorative bookmarks, and clay or paper crafts for hands-on creativity.',
+      description: 'Explore advanced sketching, perspective drawing, and portrait basics while mastering acrylic, watercolor, and poster painting techniques.',
       image: 'https://images.pexels.com/photos/3004109/pexels-photo-3004109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
         { icon: <Clock size={16} />, text: '1.5-2.5 months' },
