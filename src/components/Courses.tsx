@@ -11,7 +11,8 @@ const Courses: React.FC = () => {
   const courses = [
     {
       icon: <Paintbrush className="w-6 h-6 text-white" />,
-      title: 'Painting Fundamentals',
+      title: 'Level 1: Basic Course',
+      subtitle: 'Art Fundamentals',
       description: 'Master the basics of color theory, composition, and various painting techniques across different mediums including acrylics, oils, and watercolors.',
       image: 'https://images.pexels.com/photos/1145720/pexels-photo-1145720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
@@ -23,7 +24,8 @@ const Courses: React.FC = () => {
     },
     {
       icon: <PencilRuler className="w-6 h-6 text-white" />,
-      title: 'Sketching & Drawing',
+      title: 'Level 2: Intermediate Course',
+      subtitle: 'Artistic Development & Mediums',
       description: 'Develop your observational skills and technical abilities in pencil, charcoal, and ink drawing. Learn perspective, shading, and realistic rendering.',
       image: 'https://images.pexels.com/photos/6474494/pexels-photo-6474494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       features: [
@@ -35,7 +37,8 @@ const Courses: React.FC = () => {
     },
     {
       icon: <Palette className="w-6 h-6 text-white" />,
-      title: 'Creative Expression',
+      title: 'Level 3: Advanced Course',
+      subtitle: 'Artistic Mastery & Self Expression',
       description: 'Find your unique artistic voice through guided exploration of various styles and techniques. This advanced course focuses on personal project development.',
       image: 'https://www.pexels.com/photo/vibrant-abstract-fluid-art-in-pink-and-purple-32125446/',
       features: [
@@ -91,6 +94,7 @@ const Courses: React.FC = () => {
                     {course.icon}
                   </div>
                   <h3 className="text-2xl font-bold">{course.title}</h3>
+                  <h4 className="text-xl font-bold">{course.subtitle}</h4>
                 </div>
               </div>
               
