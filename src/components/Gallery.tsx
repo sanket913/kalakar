@@ -6,6 +6,10 @@ import { Link } from 'react-router-dom';
 import gallery1 from '../assets/images/gallery1.jpeg';
 import gallery2 from '../assets/images/gallery2.jpg';
 import gallery3 from '../assets/images/gallery3.jpg';
+import gallery4 from '../assets/images/gallery4.jpg';
+import gallery5 from '../assets/images/gallery5.jpg';
+import gallery6 from '../assets/images/gallery6.jpg';
+import gallery7 from '../assets/images/gallery7.jpg';
 
 const Gallery: React.FC = () => {
   const [ref, inView] = useInView({
@@ -30,17 +34,17 @@ const Gallery: React.FC = () => {
       
     },
     {
-      image: 'https://images.pexels.com/photos/4344878/pexels-photo-4344878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: gallery4,
       title: 'Acrylic Still Life',
       
     },
     {
-      image: 'https://images.pexels.com/photos/1569076/pexels-photo-1569076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: gallery5,
       title: 'Mixed Media Composition',
       
     },
     {
-      image: 'https://images.pexels.com/photos/1339845/pexels-photo-1339845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: gallery6,
       title: 'Ink Illustration',
      
     },
