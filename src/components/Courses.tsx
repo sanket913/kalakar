@@ -52,80 +52,78 @@ const Courses: React.FC = () => {
 
   return (
     <section id="courses" className="py-16 bg-gray-50 md:py-24" ref={ref}>
-      <div className="container">
-        <div className="text-center">
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.5 }}
-            className="px-4 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800"
-          >
-            Our Courses
-          </motion.span>
-          
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-4 section-title"
-          >
-            Discover Your Artistic Journey
-          </motion.h2>
-          
-        
-        <div className="grid gap-8 mt-16 lg:grid-cols-3">
-          {courses.map((course, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 + (index * 0.1) }}
-              className="overflow-hidden bg-white rounded-lg shadow-lg"
-            >
-              <div className="relative h-56">
-                <img 
-                  src={course.image}
-                  alt={course.title}
-                  className="object-cover w-full h-full"
-                />
-                <div className={`absolute inset-0 bg-gradient-to-br ${course.color} opacity-80`}></div>
-                <div className="absolute bottom-0 left-0 flex flex-col justify-end w-full h-full p-6 text-white">
-                  <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-white/20 backdrop-blur-sm">
-                    {course.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold">{course.title}</h3>
-                  <h4 className="text-xl font-bold">{course.subtitle}</h4>
-                </div>
+  <div className="container">
+    <div className="text-center">
+      <motion.span
+        initial={{ opacity: 0 }}
+        animate={inView ? { opacity: 1 } : {}}
+        transition={{ duration: 0.5 }}
+        className="px-4 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800"
+      >
+        Our Courses
+      </motion.span>
+
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="mt-4 section-title"
+      >
+        Discover Your Artistic Journey
+      </motion.h2>
+    </div> {/* <-- This was missing */}
+
+    <div className="grid gap-8 mt-16 lg:grid-cols-3">
+      {courses.map((course, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+          className="overflow-hidden bg-white rounded-lg shadow-lg"
+        >
+          <div className="relative h-56">
+            <img
+              src={course.image}
+              alt={course.title}
+              className="object-cover w-full h-full"
+            />
+            <div
+              className={`absolute inset-0 bg-gradient-to-br ${course.color} opacity-80`}
+            ></div>
+            <div className="absolute bottom-0 left-0 flex flex-col justify-end w-full h-full p-6 text-white">
+              <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-white/20 backdrop-blur-sm">
+                {course.icon}
               </div>
-              
-              <div className="p-6">
-                <p className="mb-4 text-gray-600">{course.description}</p>
-                
-                <div className="flex flex-wrap gap-4 mt-6">
-                  {course.features.map((feature, fidx) => (
-                    <div key={fidx} className="flex items-center gap-2 text-sm">
-                      {feature.icon}
-                      <span>{feature.text}</span>
-                    </div>
-                  ))}
+              <h3 className="text-2xl font-bold">{course.title}</h3>
+              <h5 className="text-lg">{course.subtitle}</h5>
+            </div>
+          </div>
+
+          <div className="p-6">
+            <p className="mb-4 text-gray-600">{course.description}</p>
+
+            <div className="flex flex-wrap gap-4 mt-6">
+              {course.features.map((feature, fidx) => (
+                <div key={fidx} className="flex items-center gap-2 text-sm">
+                  {feature.icon}
+                  <span>{feature.text}</span>
                 </div>
-                
-                <div className="mt-8">
-                  <a 
-                    href="#contact" 
-                    className="w-full text-center btn btn-primary"
-                  >
-                    Enroll Now
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        
-        
-      </div>
-    </section>
+              ))}
+            </div>
+
+            <div className="mt-8">
+              <a href="#contact" className="w-full text-center btn btn-primary">
+                Enroll Now
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div> {/* <-- Properly closing the main container */}
+</section>
+
   );
 };
 
