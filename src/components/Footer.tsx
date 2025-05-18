@@ -1,5 +1,5 @@
 import { Palette } from 'lucide-react';
-import logo from '../assets/images/logo.png';
+import ilogo from '../assets/images/ilogo.png';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -10,10 +10,9 @@ const Footer: React.FC = () => {
         <div className="grid gap-8 mb-8 md:grid-cols-3">
           <div className="col-span-1">
             <img 
-            src={logo}
+            src={ilogo}
             alt="Kalakar Art Academy Logo" 
             className="h-12 md:h-16"
-            style={{ filter: 'invert(1)' }
           />
             <p className="mb-4 text-gray-400">
               Unleash your creative potential and discover the artist within 
