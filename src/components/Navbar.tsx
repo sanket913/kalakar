@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
+import logo from '../assets/images/logo.png';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,7 @@ const Navbar: React.FC = () => {
       <div className="container flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
           <img 
-            src="/src/assets/images/logo.png" 
+            src={logo} 
             alt="Kalakar Art Academy Logo" 
             className="h-12 md:h-16"
           />
