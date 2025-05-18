@@ -163,8 +163,10 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="text-lg font-semibold">Location</h4>
                     <p className="text-gray-600">
-                      123 Creative Lane, Art District<br />
-                      Mumbai, Maharashtra 400001<br />
+                      Duplex Shop no.47,<br />
+                      Near Entry Gate of Samanvay Samipya Complex<br/>
+                      Harni-Sama Link Road<br/>
+                      Vadodara, Gujarat 390022<br />
                       India
                     </p>
                   </div>
