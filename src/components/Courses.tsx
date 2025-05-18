@@ -40,7 +40,7 @@ const Courses: React.FC = () => {
       title: 'Level 3: Advanced Course',
       subtitle: 'Artistic Mastery & Self Expression',
       description: 'Find your unique artistic voice through guided exploration of various styles and techniques. This advanced course focuses on personal project development.',
-      image: 'https://www.pexels.com/photo/vibrant-abstract-fluid-art-in-pink-and-purple-32125446/',
+      image: 'https://www.pexels.com/photo/a-person-making-a-skateboard-4889069/',
       features: [
         { icon: <Users size={16} />, text: 'Max 8 students' },
         { icon: <Clock size={16} />, text: '10 weeks, 3 hrs/week' },
