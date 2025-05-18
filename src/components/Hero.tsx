@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Paintbrush, Palette, PencilRuler } from 'lucide-react';
+import hero from '../assets/images/hero-profile.png';
 
 const Hero: React.FC = () => {
   return (
@@ -69,7 +70,7 @@ const Hero: React.FC = () => {
           >
         
               <img 
-                src="/src/assets/images/hero-profile.png" 
+                src={hero} 
                 alt="Kalakar Art Academy Logo" 
                 className="object-contain w-full h-full"
               />
