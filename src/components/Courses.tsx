@@ -1,0 +1,138 @@
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { Palette, PencilRuler, Paintbrush, Users, Clock, Award } from 'lucide-react';
+
+const Courses: React.FC = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const courses = [
+    {
+      icon: <Paintbrush className="w-6 h-6 text-white" />,
+      title: 'Painting Fundamentals',
+      description: 'Master the basics of color theory, composition, and various painting techniques across different mediums including acrylics, oils, and watercolors.',
+      image: 'https://images.pexels.com/photos/1145720/pexels-photo-1145720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      features: [
+        { icon: <Users size={16} />, text: 'Max 8 students' },
+        { icon: <Clock size={16} />, text: '8 weeks, 2 hrs/week' },
+        { icon: <Award size={16} />, text: 'Certificate included' },
+      ],
+      color: 'from-blue-500 to-indigo-600',
+    },
+    {
+      icon: <PencilRuler className="w-6 h-6 text-white" />,
+      title: 'Sketching & Drawing',
+      description: 'Develop your observational skills and technical abilities in pencil, charcoal, and ink drawing. Learn perspective, shading, and realistic rendering.',
+      image: 'https://images.pexels.com/photos/6474494/pexels-photo-6474494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      features: [
+        { icon: <Users size={16} />, text: 'Max 10 students' },
+        { icon: <Clock size={16} />, text: '6 weeks, 2 hrs/week' },
+        { icon: <Award size={16} />, text: 'Certificate included' },
+      ],
+      color: 'from-purple-500 to-pink-600',
+    },
+    {
+      icon: <Palette className="w-6 h-6 text-white" />,
+      title: 'Creative Expression',
+      description: 'Find your unique artistic voice through guided exploration of various styles and techniques. This advanced course focuses on personal project development.',
+      image: 'https://images.pexels.com/photos/3705894/pexels-photo-3705894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      features: [
+        { icon: <Users size={16} />, text: 'Max 8 students' },
+        { icon: <Clock size={16} />, text: '10 weeks, 3 hrs/week' },
+        { icon: <Award size={16} />, text: 'Gallery exhibition' },
+      ],
+      color: 'from-emerald-500 to-teal-600',
+    },
+  ];
+
+  return (
+    <section id="courses" className="py-16 bg-gray-50 md:py-24" ref={ref}>
+      <div className="container">
+        <div className="text-center">
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.5 }}
+            className="px-4 py-1 text-sm font-medium rounded-full bg-primary-100 text-primary-800"
+          >
+            Our Courses
+          </motion.span>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-4 section-title"
+          >
+            Discover Your Artistic Journey
+          </motion.h2>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mx-auto section-subtitle"
+          >
+            Choose from our carefully designed courses that cater to different interests, skill levels, and schedules.
+            All materials are provided for in-studio classes.
+          </motion.p>
+        </div>
+        
+        <div className="grid gap-8 mt-16 lg:grid-cols-3">
+          {courses.map((course, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.4 + (index * 0.1) }}
+              className="overflow-hidden bg-white rounded-lg shadow-lg"
+            >
+              <div className="relative h-56">
+                <img 
+                  src={course.image}
+                  alt={course.title}
+                  className="object-cover w-full h-full"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${course.color} opacity-80`}></div>
+                <div className="absolute bottom-0 left-0 flex flex-col justify-end w-full h-full p-6 text-white">
+                  <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-white/20 backdrop-blur-sm">
+                    {course.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold">{course.title}</h3>
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <p className="mb-4 text-gray-600">{course.description}</p>
+                
+                <div className="flex flex-wrap gap-4 mt-6">
+                  {course.features.map((feature, fidx) => (
+                    <div key={fidx} className="flex items-center gap-2 text-sm">
+                      {feature.icon}
+                      <span>{feature.text}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="mt-8">
+                  <a 
+                    href="#contact" 
+                    className="w-full text-center btn btn-primary"
+                  >
+                    Enroll Now
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        
+        
+      </div>
+    </section>
+  );
+};
+
+export default Courses;
