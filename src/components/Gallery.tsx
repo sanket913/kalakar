@@ -3,7 +3,9 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ArrowLeft, ArrowRight, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import gallery1 from '../assets/images/gallery1.jpg';
+import gallery1 from '../assets/images/gallery1.jpeg';
+import gallery2 from '../assets/images/gallery2.jpg';
+import gallery3 from '../assets/images/gallery3.jpg';
 
 const Gallery: React.FC = () => {
   const [ref, inView] = useInView({
@@ -19,11 +21,11 @@ const Gallery: React.FC = () => {
       title: 'Abstract Watercolor',
     },
     {
-      image: 'https://images.pexels.com/photos/1478386/pexels-photo-1478386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: gallery2,
       title: 'Oil Landscape',
     },
     {
-      image: 'https://images.pexels.com/photos/2911545/pexels-photo-2911545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: gallery3,
       title: 'Charcoal Portrait',
       
     },
