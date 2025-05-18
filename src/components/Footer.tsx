@@ -13,6 +13,7 @@ const Footer: React.FC = () => {
             src={logo}
             alt="Kalakar Art Academy Logo" 
             className="h-12 md:h-16"
+            style={{ filter: 'invert(1)' }
           />
             <p className="mb-4 text-gray-400">
               Unleash your creative potential and discover the artist within 
