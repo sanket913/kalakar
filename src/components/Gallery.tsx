@@ -16,32 +16,30 @@ const Gallery: React.FC = () => {
     {
       image: 'https://images.pexels.com/photos/1646953/pexels-photo-1646953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       title: 'Abstract Watercolor',
-      student: 'Mira P., Student',
     },
     {
       image: 'https://images.pexels.com/photos/1478386/pexels-photo-1478386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       title: 'Oil Landscape',
-      student: 'Rohan S., Student',
     },
     {
       image: 'https://images.pexels.com/photos/2911545/pexels-photo-2911545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       title: 'Charcoal Portrait',
-      student: 'Ananya T., Student',
+      
     },
     {
       image: 'https://images.pexels.com/photos/4344878/pexels-photo-4344878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       title: 'Acrylic Still Life',
-      student: 'Dhruv M., Student',
+      
     },
     {
       image: 'https://images.pexels.com/photos/1569076/pexels-photo-1569076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       title: 'Mixed Media Composition',
-      student: 'Kavya R., Student',
+      
     },
     {
       image: 'https://images.pexels.com/photos/1339845/pexels-photo-1339845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       title: 'Ink Illustration',
-      student: 'Arjun K., Student',
+     
     },
   ];
 
@@ -122,7 +120,6 @@ const Gallery: React.FC = () => {
                 <div className="absolute inset-0 transition-opacity duration-300 opacity-0 hover:opacity-100 bg-gradient-to-t from-black/70 to-transparent">
                   <div className="absolute bottom-0 left-0 p-4 text-white">
                     <h3 className="text-xl font-semibold">{item.title}</h3>
-                    <p className="text-sm">{item.student}</p>
                   </div>
                 </div>
               </div>
