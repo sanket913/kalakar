@@ -154,7 +154,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold">Email</h4>
-                    <p className="text-gray-600">info@kalakarartacademy.com</p>
+                    <p className="text-gray-600">artbykalakaar@gmail.com</p>
                   </div>
                 </div>
                 
