@@ -24,9 +24,7 @@ const Hero: React.FC = () => {
             </h1>
             
             <p className="mb-8 text-lg text-gray-600 md:text-xl">
-              Discover the artist within you at Kalakar Art Academy. Our expert instructors
-              guide you through painting, sketching, and drawing techniques in a supportive 
-              creative environment.
+             At Kalakar Art Academy, we help you discover your inner artist one stroke at a time. Discover the world of Sketching, Drawing, Painting, and Creative Art — from beginners to advanced levels.
             </p>
             
             <div className="flex flex-wrap gap-4">
