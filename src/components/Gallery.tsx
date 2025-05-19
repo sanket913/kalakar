@@ -173,7 +173,6 @@ const Gallery: React.FC = () => {
               />
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/60">
                 <h3 className="text-xl font-semibold text-white">{galleryItems[selectedImage].title}</h3>
-                <p className="text-sm text-white/80">{galleryItems[selectedImage].student}</p>
               </div>
             </div>
           </div>
