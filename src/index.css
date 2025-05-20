@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-sans text-gray-800 bg-gray-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-medium transition-all rounded-md;
+  }
+  
+  .btn-primary {
+    @apply text-white bg-primary-600 hover:bg-primary-700 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform transition;
+  }
+  
+  .btn-secondary {
+    @apply text-primary-700 bg-white border border-primary-200 hover:border-primary-300 hover:bg-primary-50;
+  }
+  
+  .section-title {
+    @apply mb-4 text-3xl font-bold md:text-4xl lg:text-5xl;
+  }
+  
+  .section-subtitle {
+    @apply max-w-3xl mb-12 text-xl text-gray-600;
+  }
+
+  .nav-link {
+    @apply relative px-6 py-3 text-sm font-medium transition-all duration-300 rounded-full hover:bg-primary-50 hover:text-primary-600;
+  }
+
+  .nav-link.active {
+    @apply bg-primary-600 text-white hover:bg-primary-700 hover:text-white;
+  }
+}
+
+.artistic-underline {
+  @apply relative inline-block;
+}
+
+.artistic-underline::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary-400 to-secondary-400 transform -translate-y-1;
+}
+
+.brush-stroke {
+  @apply relative;
+}
+
+.brush-stroke::before {
+  content: '';
+  @apply absolute inset-0 -z-10 bg-gradient-to-r from-primary-100 to-secondary-100 bg-[length:200%_100%] animate-brush-move rounded-lg;
+}
+
+.card {
+  @apply relative p-6 overflow-hidden bg-white rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.card-hover {
+  @apply relative overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.card-hover::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-1 bg-primary-500 transition-all duration-300;
+}
+
+.card-hover:hover::after {
+  @apply w-full;
+}
+
+.hindi-text {
+  @apply font-hindi tracking-wide;
+}
