@@ -110,7 +110,7 @@ const Courses: React.FC = () => {
             </div>
 
             <div className="mt-8">
-              <a href="#contact" className="w-full text-center btn btn-primary">
+              <a href="/#contact" className="w-full text-center btn btn-primary">
                 Enroll Now
               </a>
             </div>
