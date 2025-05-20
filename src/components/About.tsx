@@ -80,10 +80,6 @@ const About: React.FC = () => {
               />
             </div>
             
-            <div className="absolute p-4 -bottom-6 -right-6 md:-bottom-8 md:-right-8 bg-white rounded-lg shadow-lg">
-              <p className="text-lg font-semibold text-secondary-600">10+ Years Experience</p>
-              <p className="text-sm text-gray-600">From our founding instructors</p>
-            </div>
           </motion.div>
           
           <motion.div
