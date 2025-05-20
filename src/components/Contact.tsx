@@ -1,12 +1,84 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { useState, FormEvent, useRef } from 'react';
 
 const Contact: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
+  
+  // Add form reference
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      course: formData.get('course'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      // Read response text
+      const text = await response.text();
+
+      // Try to parse JSON if text is not empty
+      let jsonData;
+      if (text) {
+        try {
+          jsonData = JSON.parse(text);
+        } catch (parseError) {
+          jsonData = {};
+        }
+      } else {
+        jsonData = {};
+      }
+
+      if (!response.ok) {
+        throw new Error(jsonData.message || 'Failed to submit form');
+      }
+
+      setSubmitStatus({
+        type: 'success',
+        message: 'Thank you for your message! We will get back to you soon.',
+      });
+      
+      // Use the formRef to reset the form
+      if (formRef.current) {
+        formRef.current.reset();
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: error instanceof Error ? error.message : 'Failed to submit form',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
 
   return (
     <section id="contact" className="py-16 bg-white md:py-24" ref={ref}>
@@ -50,7 +122,8 @@ const Contact: React.FC = () => {
             <div className="p-6 bg-white rounded-lg shadow-lg">
               <h3 className="mb-6 text-2xl font-bold">Send Us a Message</h3>
               
-              <form className="space-y-4">
+              {/* Add ref={formRef} to the form */}
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label htmlFor="name" className="block mb-1 text-sm font-medium text-gray-700">
@@ -59,6 +132,7 @@ const Contact: React.FC = () => {
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       className="w-full px-4 py-2 border rounded-md border-gray-300 focus:border-primary-500 focus:ring focus:ring-primary-200"
                       placeholder="Your name"
                       required
@@ -71,6 +145,7 @@ const Contact: React.FC = () => {
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       className="w-full px-4 py-2 border rounded-md border-gray-300 focus:border-primary-500 focus:ring focus:ring-primary-200"
                       placeholder="Your email"
                       required
@@ -85,6 +160,7 @@ const Contact: React.FC = () => {
                   <input
                     type="tel"
                     id="phone"
+                    name="phone"
                     className="w-full px-4 py-2 border rounded-md border-gray-300 focus:border-primary-500 focus:ring focus:ring-primary-200"
                     placeholder="Your phone number"
                   />
@@ -96,6 +172,7 @@ const Contact: React.FC = () => {
                   </label>
                   <select
                     id="course"
+                    name="course"
                     className="w-full px-4 py-2 border rounded-md border-gray-300 focus:border-primary-500 focus:ring focus:ring-primary-200"
                     required
                   >
@@ -114,15 +191,28 @@ const Contact: React.FC = () => {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={4}
                     className="w-full px-4 py-2 border rounded-md border-gray-300 focus:border-primary-500 focus:ring focus:ring-primary-200"
                     placeholder="Your message"
                     required
                   ></textarea>
                 </div>
+
+                {submitStatus.type && (
+                  <div className={`p-4 rounded-md ${
+                    submitStatus.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'
+                  }`}>
+                    {submitStatus.message}
+                  </div>
+                )}
                 
-                <button type="submit" className="w-full btn btn-primary">
-                  Send Message
+                <button 
+                  type="submit" 
+                  className="w-full btn btn-primary"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
@@ -154,7 +244,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold">Email</h4>
-                    <p className="text-gray-600">info@kalakarartacademy.com</p>
+                    <p className="text-gray-600">kalakarartacademy@gmail.com</p>
                   </div>
                 </div>
                 
@@ -165,8 +255,10 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="text-lg font-semibold">Location</h4>
                     <p className="text-gray-600">
-                      123 Creative Lane, Art District<br />
-                      Mumbai, Maharashtra 400001<br />
+                      Duplex Shop no.47,<br />
+                      Near Entry Gate of Samanvay Samipya Complex<br/>
+                      Harni-Sama Link Road<br/>
+                      Vadodara, Gujarat 390022<br />
                       India
                     </p>
                   </div>
@@ -177,7 +269,7 @@ const Contact: React.FC = () => {
                     <Clock className="w-5 h-5 text-primary-600" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold">Studio Hours</h4>
+                    <h4 className="text-lg font-semibold">Academy Hours</h4>
                     <p className="text-gray-600">
                       Monday - Friday: 9:00 AM - 7:00 PM<br />
                       Saturday: 10:00 AM - 5:00 PM<br />

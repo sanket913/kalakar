@@ -1,4 +1,5 @@
-import { Palette } from 'lucide-react';
+
+import ilogo from '../assets/images/ilogo.png';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -8,39 +9,32 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className="grid gap-8 mb-8 md:grid-cols-3">
           <div className="col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <Palette size={32} className="text-primary-400" strokeWidth={1.5} />
-              <span className="text-2xl font-bold font-display">
-                <span className="text-primary-400">Kalakar</span> Art
-              </span>
-            </div>
+            <img 
+            src={ilogo}
+            alt="Kalakar Art Academy Logo" 
+            className="h-12 md:h-16"
+          />
             <p className="mb-4 text-gray-400">
               Unleash your creative potential and discover the artist within 
               at Mumbai's premier art education center.
             </p>
             <p className="text-gray-400">
               +91 8866742028<br />
-              info@kalakarartacademy.com
+              kalakarartacademy@gmail.com
             </p>
           </div>
           
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Programs</h3>
+            <h3 className="mb-4 text-lg font-semibold">Courses</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#courses" className="hover:text-primary-400">Painting Classes</a>
+                <a href="#courses" className="hover:text-primary-400">Art Fundamentals</a>
               </li>
               <li>
-                <a href="#courses" className="hover:text-primary-400">Sketching & Drawing</a>
+                <a href="#courses" className="hover:text-primary-400">Artistic Development & Mediums</a>
               </li>
               <li>
-                <a href="#courses" className="hover:text-primary-400">Creative Expression</a>
-              </li>
-              <li>
-                <a href="#courses" className="hover:text-primary-400">Private Lessons</a>
-              </li>
-              <li>
-                <a href="#courses" className="hover:text-primary-400">Children's Art Programs</a>
+                <a href="#courses" className="hover:text-primary-400">Artistic Mastery & Self Expression</a>
               </li>
             </ul>
           </div>
@@ -52,13 +46,7 @@ const Footer: React.FC = () => {
                 <a href="#" className="hover:text-primary-400">FAQ</a>
               </li>
               <li>
-                <a href="#" className="hover:text-primary-400">Materials List</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary-400">Tutorials</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary-400">Events</a>
+                <a href="#" className="hover:text-primary-400">Gallery</a>
               </li>
               <li>
                 <a href="#contact" className="hover:text-primary-400">Contact Us</a>

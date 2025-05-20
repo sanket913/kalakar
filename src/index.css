@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -42,6 +42,14 @@
   .section-subtitle {
     @apply max-w-3xl mb-12 text-xl text-gray-600;
   }
+
+  .nav-link {
+    @apply relative px-6 py-3 text-sm font-medium transition-all duration-300 rounded-full hover:bg-primary-50 hover:text-primary-600;
+  }
+
+  .nav-link.active {
+    @apply bg-primary-600 text-white hover:bg-primary-700 hover:text-white;
+  }
 }
 
 .artistic-underline {
@@ -79,23 +87,6 @@
   @apply w-full;
 }
 
-.nav-link {
-  @apply relative font-medium text-gray-700 transition-all duration-200 hover:text-primary-600;
-}
-
-.nav-link::after {
-  content: '';
-  @apply absolute left-0 bottom-0 w-0 h-0.5 bg-primary-500 transition-all duration-300;
-}
-
-.nav-link:hover::after {
-  @apply w-full;
-}
-
-.nav-link.active {
-  @apply text-primary-600;
-}
-
-.nav-link.active::after {
-  @apply w-full;
+.hindi-text {
+  @apply font-hindi tracking-wide;
 }

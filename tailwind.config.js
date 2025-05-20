@@ -47,6 +47,7 @@ export default {
       fontFamily: {
         'display': ['Playfair Display', 'serif'],
         'sans': ['Poppins', 'sans-serif'],
+        'hindi': ['Tiro Devanagari Hindi', 'serif'],
       },
       keyframes: {
         fadeIn: {

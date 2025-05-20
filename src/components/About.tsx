@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Award, Users, Clock, Star } from 'lucide-react';
+import about from '../assets/images/about.jpg';
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
@@ -73,7 +74,7 @@ const About: React.FC = () => {
           >
             <div className="relative overflow-hidden rounded-lg shadow-xl aspect-[5/4]">
               <img 
-                src="/src/assets/images/about.jpg" 
+                src={about} 
                 alt="Art studio at Kalakar Academy" 
                 className="object-cover w-full h-full"
               />

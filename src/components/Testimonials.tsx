@@ -101,20 +101,6 @@ const Testimonials: React.FC = () => {
           ))}
         </div>
         
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.8 }}
-          className="p-8 mt-16 text-center bg-white rounded-lg shadow-lg"
-        >
-          <h3 className="mb-4 text-xl font-semibold md:text-2xl">Ready to start your artistic journey?</h3>
-          <p className="mb-6 text-gray-600">
-            Join our supportive community of artists and unlock your creative potential today.
-          </p>
-          <a href="#contact" className="btn btn-primary">
-            Enroll Now
-          </a>
-        </motion.div>
       </div>
     </section>
   );

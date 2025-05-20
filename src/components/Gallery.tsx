@@ -3,6 +3,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ArrowLeft, ArrowRight, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import gallery1 from '../assets/images/gallery1.jpeg';
+import gallery2 from '../assets/images/gallery2.jpg';
+import gallery3 from '../assets/images/gallery3.jpg';
+import gallery4 from '../assets/images/gallery4.jpg';
+import gallery5 from '../assets/images/gallery5.jpg';
+import gallery6 from '../assets/images/gallery6.jpg';
 
 const Gallery: React.FC = () => {
   const [ref, inView] = useInView({
@@ -14,34 +20,32 @@ const Gallery: React.FC = () => {
 
   const galleryItems = [
     {
-      image: 'https://images.pexels.com/photos/1646953/pexels-photo-1646953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: gallery1,
       title: 'Abstract Watercolor',
-      student: 'Mira P., Student',
     },
     {
-      image: 'https://images.pexels.com/photos/1478386/pexels-photo-1478386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: gallery2,
       title: 'Oil Landscape',
-      student: 'Rohan S., Student',
     },
     {
-      image: 'https://images.pexels.com/photos/2911545/pexels-photo-2911545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: gallery3,
       title: 'Charcoal Portrait',
-      student: 'Ananya T., Student',
+      
     },
     {
-      image: 'https://images.pexels.com/photos/4344878/pexels-photo-4344878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: gallery4,
       title: 'Acrylic Still Life',
-      student: 'Dhruv M., Student',
+      
     },
     {
-      image: 'https://images.pexels.com/photos/1569076/pexels-photo-1569076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: gallery5,
       title: 'Mixed Media Composition',
-      student: 'Kavya R., Student',
+      
     },
     {
-      image: 'https://images.pexels.com/photos/1339845/pexels-photo-1339845.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: gallery6,
       title: 'Ink Illustration',
-      student: 'Arjun K., Student',
+     
     },
   ];
 
@@ -122,7 +126,6 @@ const Gallery: React.FC = () => {
                 <div className="absolute inset-0 transition-opacity duration-300 opacity-0 hover:opacity-100 bg-gradient-to-t from-black/70 to-transparent">
                   <div className="absolute bottom-0 left-0 p-4 text-white">
                     <h3 className="text-xl font-semibold">{item.title}</h3>
-                    <p className="text-sm">{item.student}</p>
                   </div>
                 </div>
               </div>
@@ -170,7 +173,6 @@ const Gallery: React.FC = () => {
               />
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-black/60">
                 <h3 className="text-xl font-semibold text-white">{galleryItems[selectedImage].title}</h3>
-                <p className="text-sm text-white/80">{galleryItems[selectedImage].student}</p>
               </div>
             </div>
           </div>
