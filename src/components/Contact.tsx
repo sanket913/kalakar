@@ -177,11 +177,10 @@ const Contact: React.FC = () => {
                     required
                   >
                     <option value="">Select a course</option>
-                    <option value="painting">Painting Fundamentals</option>
-                    <option value="sketching">Sketching & Drawing</option>
-                    <option value="creative">Creative Expression</option>
-                    <option value="private">Private Lessons</option>
-                    <option value="other">Other</option>
+                    <option value="beginner">Beginner-Art Foundations</option>
+                    <option value="intermediate">Intermediate-Skill Building..</option>
+                    <option value="advanced">Advanced-Artistic Mastery..</option>
+                    
                   </select>
                 </div>
                 
@@ -286,44 +285,77 @@ const Contact: React.FC = () => {
                 Stay updated with our latest events, workshops, and student showcases by following us on social media.
               </p>
               <div className="flex space-x-4">
-                <a 
-                  href="#" 
-                  className="flex items-center justify-center w-10 h-10 text-white transition-colors rounded-full bg-primary-600 hover:bg-primary-700"
+                {/* Instagram */}
+                <a
+                  href="https://l.instagram.com/?u=https%3A%2F%2Fyt.openinapp.co%2F3le2v%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAafQI0oYTbnXHZPm-EVuzVSRS5FKm0yuQi7IfXydSgjlVrmBJ0OV5os_zq2Jkw_aem_aRPRKEcy45lBbgDFCaoEng&e=AT3GjR24RtOxy1BlsapWpsQb35OYJ2FIRLHO-klTylxJMM6uvoy44g0EKEBg9s8X5HEBEcEiuTxvgTAeMWQdZNYRvHkLSTzeOfDIz5Sh2cYtvBAAyj9a0RI"
+                  className="flex items-center justify-center w-10 h-10 text-white rounded-full"
+                  style={{ backgroundColor: '#E1306C' }}
                   aria-label="Instagram"
+                  target="_blank"
                 >
-                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  <svg
+                    className="w-5 h-5"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5ZM4.5 7.75A3.25 3.25 0 0 1 7.75 4.5h8.5a3.25 3.25 0 0 1 3.25 3.25v8.5a3.25 3.25 0 0 1-3.25 3.25h-8.5a3.25 3.25 0 0 1-3.25-3.25v-8.5Zm7.5 1a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Zm0 2a2.75 2.75 0 1 1 0 5.5 2.75 2.75 0 0 1 0-5.5Zm4.75-.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
                   </svg>
                 </a>
-                <a 
-                  href="#" 
-                  className="flex items-center justify-center w-10 h-10 text-white transition-colors rounded-full bg-primary-600 hover:bg-primary-700"
+            
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/profile.php?id=100016615772617"
+                  className="flex items-center justify-center w-10 h-10 text-white rounded-full"
+                  style={{ backgroundColor: '#1877F2' }}
                   aria-label="Facebook"
+                  target="_blank"
                 >
-                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385h-3.047v-3.47h3.047v-2.642c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.514c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385c5.738-.901 10.126-5.866 10.126-11.855z"/>
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M22.675 0h-21.35C.598 0 0 .597 0 1.333v21.334C0 23.403.598 24 1.325 24H12.82v-9.294H9.692v-3.622h3.127V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.462.097 2.793.14v3.24l-1.918.001c-1.504 0-1.796.714-1.796 1.762v2.311h3.591l-.467 3.622h-3.124V24h6.126c.728 0 1.324-.597 1.324-1.333V1.333C24 .597 23.403 0 22.675 0z" />
                   </svg>
                 </a>
-                <a 
-                  href="#" 
-                  className="flex items-center justify-center w-10 h-10 text-white transition-colors rounded-full bg-primary-600 hover:bg-primary-700"
-                  aria-label="Twitter"
+            
+                {/* WhatsApp */}
+                <a
+                  href="https://chat.whatsapp.com/LE6XpGUu02cH2gUnhj4oIh"
+                  className="flex items-center justify-center w-10 h-10 text-white rounded-full"
+                  style={{ backgroundColor: '#25D366' }}
+                  aria-label="WhatsApp"
+                  target="_blank"
                 >
-                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.1 10.1 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 32 32"
+                  >
+                    <path d="M16.001 2.667C8.636 2.667 2.667 8.636 2.667 16c0 2.82.894 5.442 2.409 7.6L2.667 29.333 8.933 27c2.118 1.33 4.609 2.001 7.068 2.001 7.364 0 13.333-5.97 13.333-13.334S23.365 2.667 16.001 2.667zm0 24c-2.058 0-4.036-.605-5.726-1.749l-.41-.267-3.505 1.167 1.137-3.688-.267-.423a10.637 10.637 0 01-1.599-5.733c0-5.883 4.785-10.667 10.667-10.667s10.667 4.784 10.667 10.667-4.785 10.667-10.667 10.667zm5.31-7.808c-.291-.146-1.72-.846-1.986-.942-.266-.097-.46-.146-.654.147-.193.292-.75.942-.92 1.134-.17.193-.34.22-.63.073-.292-.146-1.23-.453-2.343-1.446-.867-.773-1.454-1.73-1.624-2.021-.17-.292-.018-.45.128-.596.132-.132.292-.34.438-.51.146-.171.193-.292.292-.487.097-.195.049-.365-.024-.511-.073-.146-.654-1.575-.897-2.151-.237-.57-.478-.493-.654-.503l-.555-.01c-.194 0-.511.073-.779.365s-1.024 1-1.024 2.438c0 1.438 1.046 2.826 1.192 3.02.146.193 2.055 3.144 4.975 4.408.695.3 1.237.478 1.66.612.698.222 1.333.191 1.837.116.56-.084 1.72-.704 1.963-1.385.242-.68.242-1.262.17-1.385-.073-.122-.267-.195-.56-.34z" />
                   </svg>
                 </a>
-                <a 
-                  href="#" 
-                  className="flex items-center justify-center w-10 h-10 text-white transition-colors rounded-full bg-primary-600 hover:bg-primary-700"
+            
+                {/* YouTube */}
+                <a
+                  href="https://www.youtube.com/@Mr.Kalakaar_india"
+                  className="flex items-center justify-center w-10 h-10 text-white rounded-full"
+                  style={{ backgroundColor: '#FF0000' }}
                   aria-label="YouTube"
+                  target="_blank"
                 >
-                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
                 </a>
               </div>
             </div>
+
           </motion.div>
         </div>
       </div>
