@@ -28,10 +28,10 @@ const Footer: React.FC = () => {
             <h3 className="mb-4 text-lg font-semibold">Courses</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#courses" className="hover:text-primary-400">Art Fundamentals</a>
+                <a href="#courses" className="hover:text-primary-400">Art Foundations</a>
               </li>
               <li>
-                <a href="#courses" className="hover:text-primary-400">Artistic Development & Mediums</a>
+                <a href="#courses" className="hover:text-primary-400">Skill Building & Techniques</a>
               </li>
               <li>
                 <a href="#courses" className="hover:text-primary-400">Artistic Mastery & Self Expression</a>
